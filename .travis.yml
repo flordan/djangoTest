@@ -1,1 +1,14 @@
 language: python
+python:
+  - "3.7"
+
+install: skip
+
+sudo: required
+
+branches:
+  only:
+    - master
+
+services:
+  - docker
