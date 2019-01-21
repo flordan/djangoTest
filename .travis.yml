@@ -30,6 +30,7 @@ before_script:
   - sudo docker ps -a
   
 script:
+  - sleep 1
   - curl -L http://localhost:8000
   
 after_success:
