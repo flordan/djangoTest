@@ -12,3 +12,7 @@ branches:
 
 services:
   - docker
+
+before_script:
+    - docker build --tag flordan/djangotest .
+    - docker run $(bash <(curl -s https://codecov.io/env)) -d --name django_server flordan/djangotest
