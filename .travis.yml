@@ -32,5 +32,8 @@ before_script:
 script:
   - sudo docker exec djangotest_web_1 ls
   
+after_success:
+  - docker exec djangotest_web_1 codecov --token=54bd76ff-f390-424d-a95f-c63537796c75
+  
 after_script:
   - sudo docker-compose down  
