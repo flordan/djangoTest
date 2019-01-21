@@ -25,4 +25,10 @@ before_install:
 install: skip
 
 before_script:
-  - docker-compose up -d
+  - docker-compose up 
+  
+script:
+  - docker exec djangotest_web_1 ls
+  
+after_script:
+  - docker-compose down  
