@@ -31,7 +31,7 @@ before_script:
   
 script:
   - sleep 1
-  - curl -L http://localhost:8000
+  - curl -L http://localhost:8000 > /dev/null
   
 after_success:
   - docker exec djangotest_web_1 codecov --token=54bd76ff-f390-424d-a95f-c63537796c75
