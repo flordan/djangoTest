@@ -25,4 +25,4 @@ before_install:
 install: skip
 
 before_script:
-  - docker-compose up
+  - docker-compose up -d
