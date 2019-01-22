@@ -28,6 +28,7 @@ install: skip
 before_script:
   - sudo docker-compose up -d
   - sleep 1
+  - docker exec djangotest_web_1 pip install coverage
   - sudo docker ps -a
   
 script:
